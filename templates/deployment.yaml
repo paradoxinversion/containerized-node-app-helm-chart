@@ -6,7 +6,7 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      demo-svc
+      app: demo-svc
   template:
     metadata:
       labels:
