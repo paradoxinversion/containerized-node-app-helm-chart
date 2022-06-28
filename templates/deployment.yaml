@@ -4,6 +4,10 @@ metadata:
   name: demo-svc
 spec:
   replicas: {{ .Values.replicaCount }}
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+    type: RollingUpdate
   selector:
     matchLabels:
       app: demo-svc
